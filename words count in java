@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s=sc.nextLine();//sc.nextLine().trim();
+		String []a=s.split("\\s+");
+		System.out.print(a.length);
+	}}
+//Another logic
+
+//String []a=s.spilt("\\s+");
+//int count =0;
+//for(String b:a){
+    //count++;
+//}System.o.p(b);*/
