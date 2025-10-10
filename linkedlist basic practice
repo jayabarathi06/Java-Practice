@@ -1,0 +1,14 @@
+import java.util.LinkedList;
+public class Main
+{
+	public static void main(String[] args) {
+	LinkedList<Integer> ll=new LinkedList<>();
+	ll.add(23);ll.add(34);ll.add(78);
+	for(int i: ll){
+	    
+	System.out.print(i+"->");
+
+	}
+	System.out.print("null");
+	}
+}
