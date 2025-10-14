@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();   // Input string//jaya
+        int i, j, count;
+
+        for (i = 0; i < s.length(); i++) {
+            count = 0;
+            for (j = 0; j < s.length(); j++) {
+                if (s.charAt(i) == s.charAt(j)) {
+                    count++;
+                }
+            }
+            if (count == 1) {   // First non-repeated character
+                System.out.println(s.charAt(i));
+                return;          // Exit after printing
+            }
+        }
+
+        System.out.println(-1);   // If all characters repeat
+    }
+}
