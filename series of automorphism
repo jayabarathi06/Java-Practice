@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+       int n = sc.nextInt();   // starting number
+        int c = sc.nextInt();  // ending number
+       for (int i = n; i <= c; i++) {//1
+            int a = i * i;     //1 4
+            int temp = i;   //1
+            int check = i;     // 1
+            // compare last digits one by one
+            while (temp > 0) {
+                if (temp % 10 != a % 10) {
+                    check = -1;   // mark as not automorphic
+                    break;
+                }
+                temp /= 10;
+                a /= 10;
+            }
+            if (check != -1) {   // if automorphic
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
