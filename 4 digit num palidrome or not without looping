@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int num=sc.nextInt();
+	     if(num>=1000 && num<=9999){
+	         int d1=num%10;
+	         int d2=(num/10)%10;
+	         int d3=(num/100)%10;
+	         int d4=(num/1000);
+	        if(d1==d4 && d3==d2)
+	        {
+	            System.out.println("safe unlocked!!!");
+	        }
+	       else{
+	           System.out.println("try again");
+	       }
+	    }
+	    
+	}
+}
