@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String []args){
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine().toLowerCase();
+        int count=0,acount=0,ncount=0;
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(c>='a'&&c<='z'){
+                acount++;
+            }else if('0'<=c &&c<='9'){          //if(!((c>='a'&&c<='z')||('0'>=c &&c<='9')||(c==' ')))
+                ncount++;                       //count++;//!=false meaning this so this statement false means count increase
+            }
+            else if(c==' ') acount++;       //that alphabet char is not import means you write term by if(c>='a'&&c<='z');
+            else{
+                count++;
+            }
+        }
+        System.out.print(count);
+        
+    }
+}
+
