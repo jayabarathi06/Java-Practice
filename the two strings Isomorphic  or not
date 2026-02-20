@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine() ;
+        String t=sc.nextLine();
+        if(s.length()!=t.length()) {
+            System.out.println("false");
+            return;
+        }
+        int[] map1=new int[256];
+        int[] map2=new int[256];
+        for(int i=0;i<s.length();i++) {
+            char c1=s.charAt(i);
+            char c2=t.charAt(i);
+            if(map1[c1]!=map2[c2]) {
+                System.out.println("false");
+                return;
+            }
+            map1[c1]=i+1;
+            map2[c2]=i+1;
+        }
+        System.out.println("true");
+    }
+}
